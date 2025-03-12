@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\TacheMail;
 use App\Repositories\AppelRepository;
+use App\Repositories\DocumentRepository;
 use App\Repositories\EmployeRepository;
 use App\Repositories\MatriceRepository;
 use Illuminate\Http\Request;
@@ -15,13 +16,15 @@ class MatriceController extends Controller
     protected $matriceRepository;
     protected $employeRepository;
     protected $appelRepository;
+    protected $documentRepository;
 
     public function __construct(MatriceRepository $matriceRepository,
-    EmployeRepository $employeRepository, AppelRepository $appelRepository)
+    EmployeRepository $employeRepository, AppelRepository $appelRepository,DocumentRepository $documentRepository)
     {
         $this->matriceRepository = $matriceRepository;
         $this->employeRepository = $employeRepository;
         $this->appelRepository = $appelRepository;
+        $this->documentRepository = $documentRepository;
     }
     /**
      * Display a listing of the resource.
@@ -65,9 +68,12 @@ class MatriceController extends Controller
             $matrice = $this->matriceRepository->store($request->all());
             $appel = $this->appelRepository->getById($request['appel_id']);
             $employes = $this->employeRepository->getAll();
-            Mail::to($matrice->employe->email)
+            $documents = $this->documentRepository->getByappel($request['appel_id']);
+
+             Mail::to($matrice->employe->email)
             ->send(new TacheMail($matrice));
-            return view('appel.show',compact('appel','employes'));
+           // dd($documents);
+            return view('appel.show',compact('appel','employes','documents'));
 
         }else{
             $matrice = $this->matriceRepository->store($request->all());
@@ -119,7 +125,9 @@ class MatriceController extends Controller
         $employes = $this->employeRepository->getAll();
         Mail::to($matrice->employe->email)
         ->send(new TacheMail($matrice));
-        return view('appel.show',compact('appel','employes'));
+        $documents = $this->documentRepository->getByappel($request['appel_id']);
+
+        return view('appel.show',compact('appel','employes','documents'));
          return redirect('matrice');
     }
 

@@ -100,6 +100,6 @@ class EmployeController extends Controller
     {
         $this->employeRepository->destroy($id);
         //return redirect('employe');
-        return redirect()->back()->
+        return redirect()->back();
     }
 }

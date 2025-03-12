@@ -104,6 +104,12 @@
                                         <input type="date" name="dates"  value="{{ old('dates') }}" class="form-control"  required>
                                     </div>
                                 </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Date Expiration</label>
+                                        <input type="date" name="dateexp"  value="{{ old('dateexp') }}" class="form-control"  required>
+                                    </div>
+                                </div>
 
                                 <div class="col-lg-6">
                                     <div class="form-group">
@@ -113,7 +119,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label >Choisir un fichier</label>
+                                        <label >Document appel ou manifestation interêt</label>
                                             <input name="doc" type="file" class="form-control" id="exampleInputFile">
                                     </div>
                                 </div>

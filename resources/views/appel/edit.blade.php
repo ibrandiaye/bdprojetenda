@@ -109,6 +109,13 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
+                                        <label>Date Expiration</label>
+                                        <input type="date" name="dateexp"  value="{{ $appel->dateexp }}" class="form-control"  required>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
                                         <label>Personne Impliqué</label>
                                         <input type="text" name="personne"  value="{{ $appel->personne }}" class="form-control"  required>
                                     </div>

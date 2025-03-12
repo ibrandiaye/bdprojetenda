@@ -8,7 +8,7 @@ class Appel extends Model
 {
     protected $fillable = [
         'titre','pays','theme','association','montant','dates','dater','personne','document','type_id','etat',
-        'dateb','datet'
+        'dateb','datet','dateexp'
     ];
 
     public function type()

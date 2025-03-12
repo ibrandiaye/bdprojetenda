@@ -30,7 +30,7 @@ class TacheMail extends Mailable
      */
     public function build()
     {
-        return $this->from('ibagueyesy@endaecopop.org')
+        return $this->from('ibrandiaye@endaecopop.org')
         ->subject('Nouvelle Tâche')
         ->view('matrice.mail')->with([
             'tache' => $this->matrice->tache,

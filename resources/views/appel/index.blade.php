@@ -45,6 +45,7 @@
                             <th>Réunion Brainstorming</th>
                             <th>document</th>
                             <th>Date Soumission</th>
+                            <th>Date Expiration</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -58,6 +59,8 @@
                             <td>{{  Carbon\Carbon::parse( $appel->dateb)->format('d-m-Y') }}</td>
                             <td><a href="/doc/{{ $appel->document }}" ><button class="btn btn-info"><i class="far fa-save"></i><ion-icon name="document-outline"></ion-icon></button></a></td>
                             <td>{{  Carbon\Carbon::parse( $appel->dates)->format('d-m-Y') }}</td>
+                            <td>{{  Carbon\Carbon::parse( $appel->dateexp)->format('d-m-Y') }}</td>
+
                             <td>
                                 <a href="{{ route('appel.edit', $appel->id) }}" role="button" class="btn btn-primary"><i class="fas fa-edit"></i></a>
                                 <a href="{{ route('appel.show', $appel->id) }}" role="button" class="btn btn-success"><i class="fas fa-eye"></i></a>
