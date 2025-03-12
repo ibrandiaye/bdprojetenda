@@ -354,7 +354,7 @@ ul.social li{
                             <h3>Personnes impliquées  : {{ $personneimplique  }}</h3>
                             <h3>Commentaire : {{ $comentaire  }}</h3>
             				{{--  <h3>Amazing deals, updates, interesting news right in your inbox</h3>  --}}
-            				<p><a href="#" class="btn btn-primary">Yes! Subscribe Me</a></p>
+            				<p><a href="#" class="btn btn-primary">Enda ECOPOP</a></p>
             			</div>
             		</td>
             	</tr>
