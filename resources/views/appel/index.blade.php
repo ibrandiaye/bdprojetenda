@@ -45,7 +45,7 @@
                             <th>Réunion Brainstorming</th>
                             <th>document</th>
                             <th>Date Soumission</th>
-                            <th>Date Expiration</th>
+                            <th>Date limite de soumission</th>
                             <th>Actions</th>
                         </tr>
                     </thead>

@@ -41,7 +41,7 @@
                 </div>
             @endif
                     <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <div class="card">
                           <div class="card-header">
                             <h3 class="card-title">
@@ -52,7 +52,11 @@
                           <!-- /.card-header -->
                           <div class="card-body">
                             <dl class="row">
-                                <dt class="col-sm-4">Titre</dt>
+                                <dt class="col-sm-4">Secteur</dt>
+                              <dd class="col-sm-8">
+                                {{ $appel->secteur }}
+                              </dd>
+                              <dt class="col-sm-4">Titre</dt>
                               <dd class="col-sm-8">
                                 {!! $appel->titre !!}
                               </dd>
@@ -64,16 +68,32 @@
                               <dd class="col-sm-8">
                                 {{ $appel->pays }}
                               </dd>
+                              <dt class="col-sm-4">Region</dt>
+                              <dd class="col-sm-8">
+                                {{ $appel->region }}
+                              </dd>
+                              <dt class="col-sm-4">Ct</dt>
+                              <dd class="col-sm-8">
+                                {{ $appel->ct }}
+                              </dd>
                               <dt class="col-sm-4">type</dt>
                               <dd class="col-sm-8">
                                 {{ $appel->type->nom }}
+                              </dd>
+                              <dt class="col-sm-4">Ligne d'action</dt>
+                              <dd class="col-sm-8">
+                                {{ $appel->ligne }}
+                              </dd>
+                              <dt class="col-sm-4">Axe</dt>
+                              <dd class="col-sm-8">
+                                {{ $appel->axe }}
                               </dd>
                           </div>
                           <!-- /.card-body -->
                         </div>
                         <!-- /.card -->
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-md-4">
                         <div class="card">
                           <div class="card-header">
                             <h3 class="card-title">
@@ -96,7 +116,7 @@
                               <dd class="col-sm-8">
                                 {{  Carbon\Carbon::parse( $appel->dateb)->format('d-m-Y') }}
                               </dd>
-                              <dt class="col-sm-4">Etat</dt>
+                              <dt class="col-sm-4">Statut</dt>
                               <dd class="col-sm-8">
                                 {{ $appel->etat }}
                               </dd>
@@ -176,7 +196,7 @@
                             <div class="card border-danger border-0">
                                 <div class="card-header bg-info text-center">
                                     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default1">
-                                    Ajouter un Document
+                                    Ajouter un Ressource
                                   </button></div>
                                     <div class="card-body">
                                         <table id="example2" class="table table-bordered table-responsive-md table-striped text-center">
@@ -206,7 +226,7 @@
                                                             <div class="modal-dialog">
                                                               <div class="modal-content">
                                                                 <div class="modal-header">
-                                                                  <h4 class="modal-title">Modifier Document  {{ $document->intitule }}</h4>
+                                                                  <h4 class="modal-title">Modifier Ressource  {{ $document->intitule }}</h4>
                                                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
                                                                   </button>
@@ -215,13 +235,13 @@
 
                                                                         <div class="col-lg-12">
                                                                             <div class="form-group">
-                                                                                <label>Intitule Document</label>
+                                                                                <label>Intitule Ressource</label>
                                                                                 <input type="text" name="intitule"  value="{{ $document->intitule }}" class="form-control"  required>
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-lg-12">
                                                                             <div class="form-group">
-                                                                                <label>Document </label>
+                                                                                <label>Ressource </label>
                                                                                 <input type="file" name="doc"   class="form-control"  >
                                                                             </div>
                                                                         </div>
@@ -333,7 +353,7 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h4 class="modal-title">Ajouter Document</h4>
+                  <h4 class="modal-title">Ajouter Ressource</h4>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -342,13 +362,13 @@
 
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <label>Intitule Document</label>
+                                <label>Intitule Ressource</label>
                                 <input type="text" name="intitule"  value="{{ old('intitule') }}" class="form-control"  required>
                             </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <label>Document </label>
+                                <label>Ressource </label>
                                 <input type="file" name="doc"   class="form-control"  required>
                             </div>
                         </div>
