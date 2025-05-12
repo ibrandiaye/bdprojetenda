@@ -167,120 +167,56 @@
                                             <label>Axes stratégiques</label>
                                             <select class="form-control" name="axe" required>
                                                 <option value="">Faites un choix</option>
-                                                <option value="Amélioration de la démocratie locale, de la participation et de l’engagement citoyen" >Amélioration de la démocratie locale, de la participation et de l’engagement citoyen</option>
-                                                <option value="Améliorer la sécurité, la résilience et l’attractivité territoriale pour les États, les partenaires et les communautés de base" >Améliorer la sécurité, la résilience et l’attractivité territoriale pour les États, les partenaires et les communautés de base</option>
-                                                <option value="Renforcer l’employabilité, l’entreprenariat et l’autonomisation des jeunes, femmes, personnes handicapées et autres groupes vulnérables" >Renforcer l’employabilité, l’entreprenariat et l’autonomisation des jeunes, femmes, personnes handicapées et autres groupes vulnérables</option>
-                                                <option value="Développer les capacités de prospectives, de programmation et de suivi-évaluation des acteurs locaux pour la territorialisation des politiques publiques et des engagements internationaux">Développer les capacités de prospectives, de programmation et de suivi-évaluation des acteurs locaux pour la territorialisation des politiques publiques et des engagements internationaux</option>
-                                                <option value="Soutenir les dynamiques de transition dans les villes et territoires">Soutenir les dynamiques de transition dans les villes et territoires</option>
+                                                <option value="Axe 1 : Amélioration de la démocratie locale, de la participation et de l’engagement citoyen">
+                                                    Axe 1 : Amélioration de la démocratie locale, de la participation et de l’engagement citoyen
+                                                </option>
+                                                <option value="Axe 2 : Améliorer la sécurité, la résilience et l’attractivité territoriale pour les États, les partenaires et les communautés de base">
+                                                    Axe 2 : Améliorer la sécurité, la résilience et l’attractivité territoriale pour les États, les partenaires et les communautés de base
+                                                </option>
+                                                <option value="Axe 3 : Renforcer l’employabilité, l’entreprenariat et l’autonomisation des jeunes, femmes, personnes handicapées et autres groupes vulnérables">
+                                                    Axe 3 : Renforcer l’employabilité, l’entreprenariat et l’autonomisation des jeunes, femmes, personnes handicapées et autres groupes vulnérables
+                                                </option>
+                                                <option value="Axe 4 : Développer les capacités de prospectives, de programmation et de suivi-évaluation des acteurs locaux pour la territorialisation des politiques publiques et des engagements internationaux">
+                                                    Axe 4 : Développer les capacités de prospectives, de programmation et de suivi-évaluation des acteurs locaux pour la territorialisation des politiques publiques et des engagements internationaux
+                                                </option>
+                                                <option value="Axe 5 : Soutenir les dynamiques de transition dans les villes et territoires">
+                                                    Axe 5 : Soutenir les dynamiques de transition dans les villes et territoires
+                                                </option>
                                             </select>
                                         </div>
                                     </div>
+
+                                    <!-- LIGNES D'ACTION -->
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label>Ligne d’action</label>
                                             <select class="form-control" name="ligne" required>
                                                 <option value="">Faites un choix</option>
-                                                <option value="Accompagnement de la mise en œuvre et consolidation d’approches de participation et engagement citoyens dans les collectivités territoriales ;" >Axe 1 : Accompagnement de la mise en œuvre et consolidation d’approches de participation et
-                                                    engagement citoyens dans les collectivités territoriales ;</option>
-                                                <option value="Accompagnement des collectivités territoriales pour renforcer les processus de
-                                                dématérialisation des procédures administratives et fiscales, de transparence et de suivi
-                                                budgétaire ;" >Axe 1 : Accompagnement des collectivités territoriales pour renforcer les processus de
-                                                dématérialisation des procédures administratives et fiscales, de transparence et de suivi
-                                                budgétaire ;</option>
-                                                <option value="Soutien aux initiatives de renforcement de la citoyenneté, de démocratie participative,
-                                                de prévention et lutte contre la corruption dans les collectivités territoriales ;" >Axe 1 : Soutien aux initiatives de renforcement de la citoyenneté, de démocratie participative,
-                                                de prévention et lutte contre la corruption dans les collectivités territoriales ;</option>
-                                                <option value="Accompagnement des processus électoraux et consolidation de la démocratie en Afrique."> Axe 1 : Accompagnement des processus électoraux et consolidation de la démocratie en Afrique. </option>
-                                                <option value="Prévention, gestion des conflits et renforcement de la cohésion sociale dans les villes et territoires ;">
-                                                    Axe 2 : Prévention, gestion des conflits et renforcement de la cohésion sociale dans les villes
-                                                    et territoires ;
-                                                </option>
-                                                <option value="Renforcement de la résilience aux vulnérabilités (climatiques, environnementales, etc.)
-                                                et la sécurité humaine dans les villes et territoires ;"> Axe 2 : Renforcement de la résilience aux vulnérabilités (climatiques, environnementales, etc.)
-                                                et la sécurité humaine dans les villes et territoires ;</option>
-                                                <option value="Soutien aux initiatives de développement économique des territoires en renforçant les
-                                                capacités de mobilisation de ressources propres, de réalisation d’infrastructures à haute
-                                                portée économique et de valorisation des potentialités des territoires ;
-                                                ">Axe 2 : Soutien aux initiatives de développement économique des territoires en renforçant les
-                                                capacités de mobilisation de ressources propres, de réalisation d’infrastructures à haute
-                                                portée économique et de valorisation des potentialités des territoires ;
-                                                </option>
-                                                <option value="Appui aux initiatives de développement de l’économie bleue et de l’économie verte à
-                                                travers l’implication du secteur privé local ;">
-                                                    Axe 2 : Appui aux initiatives de développement de l’économie bleue et de l’économie verte à
-                                                    travers l’implication du secteur privé local ;
-                                                </option>
-                                                <option value="Amélioration du cadre de vie, de l’attractivité territoriale et de l’accès aux services sociaux
-                                                de base.">Axe 2 : Amélioration du cadre de vie, de l’attractivité territoriale et de l’accès aux services sociaux
-                                                de base.</option>
-                                                <option value="Accompagnement et appui à la mise en œuvre d’initiatives de l’économie sociale et
-                                                solidaire (ESS) dans les collectivités territoriales ;">
-                                                    Axe 3 : Accompagnement et appui à la mise en œuvre d’initiatives de l’économie sociale et
-                                                    solidaire (ESS) dans les collectivités territoriales ;
-                                                </option>
-                                                <option value="Accompagnement des collectivités territoriales et des communautés à valoriser les
-                                                    filières porteuses de l’économie locale et les opportunités de la croissance durable ;" >
-                                                    Axe 3 : Accompagnement des collectivités territoriales et des communautés à valoriser les
-                                                    filières porteuses de l’économie locale et les opportunités de la croissance durable ;
-                                                </option>
-                                                <option value="Développement d’offres de renforcement de capacités d’entreprenariat et
-                                                    d’autonomisation adaptées aux contextes locaux en relation avec les universités, les
-                                                    structures d’Enseignement Technique et de la Formation Professionnelle, les chambres
-                                                    consulaires, les associations faîtières des producteurs, etc. ;">
-                                                    Axe 3 : Développement d’offres de renforcement de capacités d’entreprenariat et
-                                                    d’autonomisation adaptées aux contextes locaux en relation avec les universités, les
-                                                    structures d’Enseignement Technique et de la Formation Professionnelle, les chambres
-                                                    consulaires, les associations faîtières des producteurs, etc. ;
-                                                </option>
-                                                <option value="Renforcement des capacités techniques, organisationnelles et institutionnelles des
-                                                    collectivités territoriales dans la formulation et la mise en œuvre de stratégies locales
-                                                    de promotion de l’emploi et d’autonomisation économique des jeunes, des femmes, des
-                                                    personnes handicapées et autres groupes vulnérables.">
-                                                    Axe 3 : Renforcement des capacités techniques, organisationnelles et institutionnelles des
-                                                    collectivités territoriales dans la formulation et la mise en œuvre de stratégies locales
-                                                    de promotion de l’emploi et d’autonomisation économique des jeunes, des femmes, des
-                                                    personnes handicapées et autres groupes vulnérables.
-                                                </option>
-                                                <option value="Renforcement des capacités d’intervention des acteurs locaux pour la territorialisation
-                                                    des politiques publiques et des Agendas internationaux ;">
-                                                    Axe 4 : Renforcement des capacités d’intervention des acteurs locaux pour la territorialisation
-                                                    des politiques publiques et des Agendas internationaux ;
-                                                </option>
-                                                <option value="Appui à l’élaboration, la mise-en œuvre et le suivi évaluation des documents de
-                                                    planification des Collectivités Territoriales qui intègrent les politiques publiques et les
-                                                    Agendas internationaux pour une meilleure justice sociale et spatiale ;">
-                                                    Axe 4 : Appui à l’élaboration, la mise-en œuvre et le suivi évaluation des documents de
-                                                    planification des Collectivités Territoriales qui intègrent les politiques publiques et les
-                                                    Agendas internationaux pour une meilleure justice sociale et spatiale ;
-                                                </option>
-                                                <option value="Accompagnement des villes et territoires dans les stratégies et actions de mobilisation de
-                                                    ressources et l’expérimentation et la mise à l’échelle de mécanismes innovants de financement
-                                                    de leur développement.">
-                                                    Axe 4 : Accompagnement des villes et territoires dans les stratégies et actions de mobilisation de
-                                                    ressources et l’expérimentation et la mise à l’échelle de mécanismes innovants de financement
-                                                    de leur développement.
-                                                </option>
-                                                <option value="Appui aux initiatives de transition numérique pour une transformation durable des villes
-                                                    et territoires en Afrique ;">
-                                                    Axe 5 : Appui aux initiatives de transition numérique pour une transformation durable des villes
-                                                    et territoires en Afrique ;
-                                                </option>
-                                                <option value="Appui à la valorisation et gestion durables des ressources naturelles et foncières des
-                                                    villes et territoires d’Afrique ;">
-                                                    Appui à la valorisation et gestion durables des ressources naturelles et foncières des
-                                                    villes et territoires d’Afrique ;
-                                                </option>
-                                                <option value="Accompagnement et consolidation des initiatives de transition écologique et énergétique
-                                                    dans les villes et territoires ;">
-                                                    Axe 5 : Accompagnement et consolidation des initiatives de transition écologique et énergétique dans les villes et territoires ;
-                                                </option>
-                                                <option value="Accompagnement des collectivités territoriales dans la valorisation du capital humain
-                                                    par la capture du dividende démographique pour une transformation sociale et sociétale
-                                                    durable en Afrique.">
-                                                    Axe 5 : Accompagnement des collectivités territoriales dans la valorisation du capital humain
-                                                    par la capture du dividende démographique pour une transformation sociale et sociétale
-                                                    durable en Afrique.
-                                                </option>
+                                                <!-- Axe 1 -->
+                                                <option value="Axe 1 : Accompagnement de la mise en œuvre et consolidation d’approches de participation et engagement citoyens dans les collectivités territoriales">Axe 1 : Accompagnement de la mise en œuvre et consolidation d’approches de participation et engagement citoyens dans les collectivités territoriales</option>
+                                                <option value="Axe 1 : Accompagnement des collectivités territoriales pour renforcer les processus de dématérialisation des procédures administratives et fiscales">Axe 1 : Accompagnement des collectivités territoriales pour renforcer les processus de dématérialisation des procédures administratives et fiscales</option>
+                                                <option value="Axe 1 : Soutien aux initiatives de renforcement de la citoyenneté, démocratie participative et lutte contre la corruption">Axe 1 : Soutien aux initiatives de renforcement de la citoyenneté, démocratie participative et lutte contre la corruption</option>
+                                                <option value="Axe 1 : Accompagnement des processus électoraux et consolidation de la démocratie en Afrique">Axe 1 : Accompagnement des processus électoraux et consolidation de la démocratie en Afrique</option>
+                                                <!-- Axe 2 -->
+                                                <option value="Axe 2 : Prévention, gestion des conflits et renforcement de la cohésion sociale">Axe 2 : Prévention, gestion des conflits et renforcement de la cohésion sociale</option>
+                                                <option value="Axe 2 : Renforcement de la résilience aux vulnérabilités et la sécurité humaine">Axe 2 : Renforcement de la résilience aux vulnérabilités et la sécurité humaine</option>
+                                                <option value="Axe 2 : Soutien aux initiatives de développement économique des territoires">Axe 2 : Soutien aux initiatives de développement économique des territoires</option>
+                                                <option value="Axe 2 : Appui au développement de l’économie bleue et verte">Axe 2 : Appui au développement de l’économie bleue et verte</option>
+                                                <option value="Axe 2 : Amélioration du cadre de vie et de l’accès aux services sociaux de base">Axe 2 : Amélioration du cadre de vie et de l’accès aux services sociaux de base</option>
+                                                <!-- Axe 3 -->
+                                                <option value="Axe 3 : Appui à l’économie sociale et solidaire (ESS)">Axe 3 : Appui à l’économie sociale et solidaire (ESS)</option>
+                                                <option value="Axe 3 : Valorisation des filières porteuses de l’économie locale">Axe 3 : Valorisation des filières porteuses de l’économie locale</option>
+                                                <option value="Axe 3 : Renforcement des capacités d’entreprenariat en lien avec les universités et centres de formation">Axe 3 : Renforcement des capacités d’entreprenariat en lien avec les universités et centres de formation</option>
+                                                <option value="Axe 3 : Promotion de l’emploi et autonomisation des groupes vulnérables">Axe 3 : Promotion de l’emploi et autonomisation des groupes vulnérables</option>
+                                                <!-- Axe 4 -->
+                                                <option value="Axe 4 : Renforcement des capacités d’intervention pour la territorialisation des politiques publiques">Axe 4 : Renforcement des capacités d’intervention pour la territorialisation des politiques publiques</option>
+                                                <option value="Axe 4 : Appui aux documents de planification intégrant les agendas internationaux">Axe 4 : Appui aux documents de planification intégrant les agendas internationaux</option>
+                                                <option value="Axe 4 : Accompagnement dans la mobilisation de ressources et financements innovants">Axe 4 : Accompagnement dans la mobilisation de ressources et financements innovants</option>
+                                                <!-- Axe 5 -->
+                                                <option value="Axe 5 : Appui à la transition numérique pour les villes durables">Axe 5 : Appui à la transition numérique pour les villes durables</option>
+                                                <option value="Axe 5 : Valorisation durable des ressources naturelles et foncières">Axe 5 : Valorisation durable des ressources naturelles et foncières</option>
+                                                <option value="Axe 5 : Transition écologique et énergétique">Axe 5 : Transition écologique et énergétique</option>
+                                                <option value="Axe 5 : Valorisation du capital humain pour la transformation sociale">Axe 5 : Valorisation du capital humain pour la transformation sociale</option>
                                             </select>
                                         </div>
                                     </div>
@@ -326,3 +262,34 @@
     }
   })
 </script>
+@section("script")
+<script>
+    $(document).ready(function () {
+        const allOptions = $('select[name="ligne"] option').clone();
+
+        $('select[name="axe"]').on('change', function () {
+            const selectedAxe = $(this).val();
+            const $ligneSelect = $('select[name="ligne"]');
+            $ligneSelect.empty().append('<option value="">Faites un choix</option>');
+
+            if (!selectedAxe) return;
+
+            // Extraire "Axe 1", "Axe 2", etc.
+            const axePrefixMatch = selectedAxe.match(/Axe \d+/);
+            if (!axePrefixMatch) return;
+
+            const axePrefix = axePrefixMatch[0];
+
+            // Filtrer les lignes d'action contenant cet axe
+            allOptions.each(function () {
+                const text = $(this).text().trim();
+                if (text.startsWith(axePrefix)) {
+                    $ligneSelect.append($(this).clone());
+                }
+            });
+        });
+    });
+</script>
+
+@endsection
+

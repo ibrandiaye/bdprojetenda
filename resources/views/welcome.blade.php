@@ -156,7 +156,7 @@
                         <a href="{{ route('document.index') }}" class="nav-link">
                             <i class="nav-icon fas fa-file-alt"></i>
                             <p>
-                                Document
+                                Ressource
                             </p>
                         </a>
 
