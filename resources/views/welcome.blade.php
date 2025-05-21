@@ -35,6 +35,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
 
     <script src=https://cdn.datatables.net/plug-ins/1.10.20/i18n/French.json></script>
+    <link rel="stylesheet" href="{!! asset('assets/plugins/select2/css/select2.min.css') !!}">
+    <link rel="stylesheet" href="{!! asset('assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') !!}">
 
     @yield('calendar')
 </head>
@@ -318,9 +320,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+<script src="{!! asset('assets/plugins/select2/js/select2.full.min.js') !!}"></script>
+
 <script>
     $(function () {
+         //Initialize Select2 Elements
+        $('.select2').select2()
+
+        //Initialize Select2 Elements
+        $('.select2bss4').select2({
+        theme: 'bootstrap4'
+        })
         $("#example1").DataTable({
             "paging": true,
             "lengthChange": true,

@@ -135,7 +135,10 @@
                               </dd>
                               <dt class="col-sm-4">Document</dt>
                               <dd class="col-sm-8">
-                                <a href="/doc/{{ $appel->document }}"  >Document</a></dd>
+                                @foreach($appel->docAppels as $key => $value)
+                                    <a href="/doc/{{ $value->nomdoc }}"  > Document {{ $key }}</a></dd>
+
+                                @endforeach
                                 </dl>
                           </div>
                           <!-- /.card-body -->

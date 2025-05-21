@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\DocAppel;
 use App\Repositories\AppelRepository;
+use App\Repositories\DocAppelRepository;
 use App\Repositories\DocumentRepository;
 use App\Repositories\EmployeRepository;
 use App\Repositories\MatriceRepository;
@@ -16,15 +18,18 @@ class AppelController extends Controller
     protected $matriceRepository;
     protected $employeRepository;
     protected $documentRepository;
+    protected $docAppelRepository;
 
     public function __construct(AppelRepository $appelRepository, TypeRepository $typeRepository,MatriceRepository $matriceRepository,
-    EmployeRepository $employeRepository,DocumentRepository $documentRepository)
+    EmployeRepository $employeRepository,DocumentRepository $documentRepository,
+    DocAppelRepository $docAppelRepository)
     {
         $this->appelRepository = $appelRepository;
         $this->typeRepository = $typeRepository;
         $this->matriceRepository = $matriceRepository;
         $this->employeRepository = $employeRepository;
         $this->documentRepository = $documentRepository;
+        $this->docAppelRepository = $docAppelRepository;
     }
     /**
      * Display a listing of the resource.
@@ -69,14 +74,27 @@ class AppelController extends Controller
             'personne' => 'required|string',
             'type_id' => 'required',
             'etat' => 'required|string',
-            'doc' => 'required|file|mimes:docx,pdf,doc',
+          //  'doc' => 'required|file|mimes:docx,pdf,doc',
 
         ]);
 
-       $imageName = time().'.'.$request->doc->extension();
+     /*  $imageName = time().'.'.$request->doc->extension();
         $request->doc->move(public_path('doc'), $imageName);
-        $request->merge(['document'=>$imageName]);
+        $request->merge(['document'=>$imageName]);*/
+        $request->merge(['document'=>"neant"]);
         $appel = $this->appelRepository->store($request->all());
+        $nombreFichier = count($request['docs']);
+        $fichiers = $request['docs'];
+        for($x = 0; $x < $nombreFichier; $x++) {
+            $files = $fichiers[$x];
+             $destinationPath = 'doc/'; // upload path
+             $docName = time().$x.".". $files->getClientOriginalExtension();
+             $files->move($destinationPath, $docName);
+             $docAppel = new DocAppel();
+             $docAppel->nomdoc = $docName;
+             $docAppel->appel_id=$appel->id;
+             $docAppel->save();
+        }
 
        return  redirect('appel');
 
