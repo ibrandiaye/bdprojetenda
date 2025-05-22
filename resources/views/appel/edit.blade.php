@@ -130,7 +130,7 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label>Date de Soumission</label>
+                                            <label>Date de Soumission offre ou note</label>
                                             <input type="date" name="dates"  value="{{ $appel->dates }}" class="form-control"  required>
                                         </div>
                                     </div>
@@ -162,30 +162,30 @@
                                             <label>Axes stratégiques</label>
                                             <select class="form-control" name="axe" required>
                                                 <option value="">Faites un choix</option>
-                                                <option value="Axe 1 : Amélioration de la démocratie locale, de la participation et de l’engagement citoyen"
-                                                {{ $appel->axe == "Axe 1 : Amélioration de la démocratie locale, de la participation et de l’engagement citoyen" ? 'seleted' : ''  }}
+                                                <option value="Axe 1 : Renforcement de la démocratie, de la gouvernance, de la participation et de l’engagement citoyen aux différentes échelles du local à l’international"
+                                                {{ $appel->axe == "Axe 1 : Renforcement de la démocratie, de la gouvernance, de la participation et de l’engagement citoyen aux différentes échelles du local à l’international" ? 'seleted' : ''  }}
                                                 >
-                                                    Axe 1 : Amélioration de la démocratie locale, de la participation et de l’engagement citoyen
+                                                    Axe 1 : Renforcement de la démocratie, de la gouvernance, de la participation et de l’engagement citoyen aux différentes échelles du local à l’international
                                                 </option>
-                                                <option value="Axe 2 : Améliorer la sécurité, la résilience et l’attractivité territoriale pour les États, les partenaires et les communautés de base"
-                                                {{ $appel->axe == "Axe 2 : Améliorer la sécurité, la résilience et l’attractivité territoriale pour les États, les partenaires et les communautés de base" ? 'seleted' : ''  }}
+                                                <option value="Axe 2 : Renforcement de la sécurité, de la réponse aux changements climatiques, de la résilience et de l’attractivité des territoires"
+                                                {{ $appel->axe == "Axe 2 : Renforcement de la sécurité, de la réponse aux changements climatiques, de la résilience et de l’attractivité des territoires" ? 'seleted' : ''  }}
                                                 >
-                                                    Axe 2 : Améliorer la sécurité, la résilience et l’attractivité territoriale pour les États, les partenaires et les communautés de base
+                                                    Axe 2 : Renforcement de la sécurité, de la réponse aux changements climatiques, de la résilience et de l’attractivité des territoires
                                                 </option>
-                                                <option value="Axe 3 : Renforcer l’employabilité, l’entreprenariat et l’autonomisation des jeunes, femmes, personnes handicapées et autres groupes vulnérables"
-                                                {{ $appel->axe == "Axe 3 : Renforcer l’employabilité, l’entreprenariat et l’autonomisation des jeunes, femmes, personnes handicapées et autres groupes vulnérables" ? 'seleted' : ''  }}
+                                                <option value="Axe 3 : Soutien à l’employabilité, à l’entreprenariat et à l’autonomisation des jeunes, femmes, personnes handicapées et autres groupes vulnérables"
+                                                {{ $appel->axe == "Axe 3 : Soutien à l’employabilité, à l’entreprenariat et à l’autonomisation des jeunes, femmes, personnes handicapées et autres groupes vulnérables" ? 'seleted' : ''  }}
                                                 >
-                                                    Axe 3 : Renforcer l’employabilité, l’entreprenariat et l’autonomisation des jeunes, femmes, personnes handicapées et autres groupes vulnérables
+                                                    Axe 3 : Soutien à l’employabilité, à l’entreprenariat et à l’autonomisation des jeunes, femmes, personnes handicapées et autres groupes vulnérables
                                                 </option>
-                                                <option value="Axe 4 : Développer les capacités de prospectives, de programmation et de suivi-évaluation des acteurs locaux pour la territorialisation des politiques publiques et des engagements internationaux"
-                                                {{ $appel->axe == "Axe 4 : Développer les capacités de prospectives, de programmation et de suivi-évaluation des acteurs locaux pour la territorialisation des politiques publiques et des engagements internationaux" ? 'seleted' : ''  }}
+                                                <option value="Axe 4 : Appui à la territorialisation des politiques publiques et des Agendas internationaux"
+                                                {{ $appel->axe == "Axe 4 : Appui à la territorialisation des politiques publiques et des Agendas internationaux" ? 'seleted' : ''  }}
                                                 >
-                                                    Axe 4 : Développer les capacités de prospectives, de programmation et de suivi-évaluation des acteurs locaux pour la territorialisation des politiques publiques et des engagements internationaux
+                                                    Axe 4 : Appui à la territorialisation des politiques publiques et des Agendas internationaux
                                                 </option>
-                                                <option value="Axe 5 : Soutenir les dynamiques de transition dans les villes et territoires"
-                                                {{ $appel->axe == "Axe 5 : Soutenir les dynamiques de transition dans les villes et territoires" ? 'seleted' : ''  }}
+                                                <option value="Axe 5 : Accompagnement des dynamiques de transition pour un développement durable"
+                                                {{ $appel->axe == "Axe 5 : Accompagnement des dynamiques de transition pour un développement durable" ? 'seleted' : ''  }}
                                                 >
-                                                    Axe 5 : Soutenir les dynamiques de transition dans les villes et territoires
+                                                    Axe 5 : Accompagnement des dynamiques de transition pour un développement durable
                                                 </option>
                                             </select>
                                         </div>
@@ -197,34 +197,55 @@
                                             <label>Ligne d’action</label>
                                             <select class="form-control" name="ligne" required>
                                                 <option value="">Faites un choix</option>
-                                                <!-- Axe 1 -->
-                                                <option value="Axe 1  LA 1: Accompagnement de la mise en œuvre et consolidation d’approches de participation et engagement citoyens dans les collectivités territoriales">Axe 1 LA 1: Accompagnement de la mise en œuvre et consolidation d’approches de participation et engagement citoyens dans les collectivités territoriales</option>
-                                                <option value="Axe 1 LA 2: Accompagnement des collectivités territoriales pour renforcer les processus de dématérialisation des procédures administratives et fiscales">Axe 1 LA 2: Accompagnement des collectivités territoriales pour renforcer les processus de dématérialisation des procédures administratives et fiscales</option>
-                                                <option value="Axe 1 LA 3: Soutien aux initiatives de renforcement de la citoyenneté, démocratie participative et lutte contre la corruption">Axe 1 LA 3: Soutien aux initiatives de renforcement de la citoyenneté, démocratie participative et lutte contre la corruption</option>
-                                                <option value="Axe 1 LA 4: Accompagnement des processus électoraux et consolidation de la démocratie en Afrique">Axe 1 LA 4: Accompagnement des processus électoraux et consolidation de la démocratie en Afrique</option>
-                                                <!-- Axe 2 -->
-                                                <option value="Axe 2 LA 5: Prévention, gestion des conflits et renforcement de la cohésion sociale">Axe 2 LA 5: Prévention, gestion des conflits et renforcement de la cohésion sociale</option>
-                                                <option value="Axe 2 LA 6: Renforcement de la résilience aux vulnérabilités et la sécurité humaine">Axe 2 LA 6: Renforcement de la résilience aux vulnérabilités et la sécurité humaine</option>
-                                                <option value="Axe 2 LA 7: Soutien aux initiatives de développement économique des territoires">Axe 2 LA 7: Soutien aux initiatives de développement économique des territoires</option>
-                                                <option value="Axe 2 LA 8: Appui au développement de l’économie bleue et verte">Axe 2 LA 8: Appui au développement de l’économie bleue et verte</option>
-                                                <option value="Axe 2 LA 9: Amélioration du cadre de vie et de l’accès aux services sociaux de base">Axe 2 LA 9: Amélioration du cadre de vie et de l’accès aux services sociaux de base</option>
-                                                <!-- Axe 3 -->
-                                                <option value="Axe 3 LA 10: Appui à l’économie sociale et solidaire (ESS)">Axe 3 LA 10: Appui à l’économie sociale et solidaire (ESS)</option>
-                                                <option value="Axe 3 LA 11: Valorisation des filières porteuses de l’économie locale">Axe 3 LA 11: Valorisation des filières porteuses de l’économie locale</option>
-                                                <option value="Axe 3 LA 12: Renforcement des capacités d’entreprenariat en lien avec les universités et centres de formation">Axe 3 LA 12: Renforcement des capacités d’entreprenariat en lien avec les universités et centres de formation</option>
-                                                <option value="Axe 3 LA 13: Promotion de l’emploi et autonomisation des groupes vulnérables">Axe 3 LA 13: Promotion de l’emploi et autonomisation des groupes vulnérables</option>
-                                                <!-- Axe 4 -->
-                                                <option value="Axe 4 LA 14: Renforcement des capacités d’intervention pour la territorialisation des politiques publiques">Axe 4 LA 14: Renforcement des capacités d’intervention pour la territorialisation des politiques publiques</option>
-                                                <option value="Axe 4 LA 15: Appui aux documents de planification intégrant les agendas internationaux">Axe 4 LA 15: Appui aux documents de planification intégrant les agendas internationaux</option>
-                                                <option value="Axe 4 LA 16: Accompagnement dans la mobilisation de ressources et financements innovants">Axe 4 LA 16: Accompagnement dans la mobilisation de ressources et financements innovants</option>
-                                                <!-- Axe 5 -->
-                                                <option value="Axe 5 LA 17: Appui à la transition numérique pour les villes durables">Axe 5 LA 17: Appui à la transition numérique pour les villes durables</option>
-                                                <option value="Axe 5 LA 18: Valorisation durable des ressources naturelles et foncières">Axe 5 LA 18: Valorisation durable des ressources naturelles et foncières</option>
-                                                <option value="Axe 5 LA 19: Transition écologique et énergétique">Axe 5 LA 19: Transition écologique et énergétique</option>
-                                                <option value="Axe 5 LA 20: Valorisation du capital humain pour la transformation sociale">Axe 5 LA 20: Valorisation du capital humain pour la transformation sociale</option>
+
+                                                {{-- Axe 1 --}}
+                                                <option value="Axe 1  LA 1: Accompagnement de la mise en œuvre et consolidation d’approches de participation et engagement citoyens dans les collectivités territoriales" {{ $appel->ligne == 'Axe 1  LA 1: Accompagnement de la mise en œuvre et consolidation d’approches de participation et engagement citoyens dans les collectivités territoriales' ? 'selected' : '' }}>Axe 1  LA 1: Accompagnement de la mise en œuvre et consolidation d’approches de participation et engagement citoyens dans les collectivités territoriales</option>
+
+                                                <option value="Axe 1 LA 2: Accompagnement des collectivités territoriales pour renforcer les processus de dématérialisation des procédures administratives et fiscales, de transparence et de suivi budgétaire " {{ $appel->ligne == 'Axe 1 LA 2: Accompagnement des collectivités territoriales pour renforcer les processus de dématérialisation des procédures administratives et fiscales, de transparence et de suivi budgétaire ' ? 'selected' : '' }}>Axe 1 LA 2: Accompagnement des collectivités territoriales pour renforcer les processus de dématérialisation des procédures administratives et fiscales, de transparence et de suivi budgétaire </option>
+
+                                                <option value="Axe 1 LA 3: Soutien aux initiatives de renforcement de la citoyenneté, de démocratie participative, de prévention et lutte contre la corruption dans les collectivités territoriales " {{ $appel->ligne == 'Axe 1 LA 3: Soutien aux initiatives de renforcement de la citoyenneté, de démocratie participative, de prévention et lutte contre la corruption dans les collectivités territoriales ' ? 'selected' : '' }}>Axe 1 LA 3: Soutien aux initiatives de renforcement de la citoyenneté, de démocratie participative, de prévention et lutte contre la corruption dans les collectivités territoriales </option>
+
+                                                <option value="Axe 1 LA 4: Accompagnement des processus électoraux et consolidation de la démocratie en Afrique" {{ $appel->ligne == 'Axe 1 LA 4: Accompagnement des processus électoraux et consolidation de la démocratie en Afrique' ? 'selected' : '' }}>Axe 1 LA 4: Accompagnement des processus électoraux et consolidation de la démocratie en Afrique</option>
+
+                                                {{-- Axe 2 --}}
+                                                <option value="Axe 2 LA 5: Prévention, gestion des conflits et renforcement de la cohésion sociale" {{ $appel->ligne == 'Axe 2 LA 5: Prévention, gestion des conflits et renforcement de la cohésion sociale' ? 'selected' : '' }}>Axe 2 LA 5: Prévention, gestion des conflits et renforcement de la cohésion sociale</option>
+
+                                                <option value="Axe 2 LA 6: Renforcement de la résilience aux vulnérabilités (climatiques, environnementales, etc.)  et la sécurité humaine" {{ $appel->ligne == 'Axe 2 LA 6: Renforcement de la résilience aux vulnérabilités (climatiques, environnementales, etc.)  et la sécurité humaine' ? 'selected' : '' }}>Axe 2 LA 6: Renforcement de la résilience aux vulnérabilités (climatiques, environnementales, etc.)  et la sécurité humaine</option>
+
+                                                <option value="Axe 2 LA 7: Soutien aux initiatives de développement économique des territoires en renforçant les capacités de mobilisation de ressources propres, de réalisation d’infrastructures à haute portée économique et de valorisation des potentialités des territoires ; " {{ $appel->ligne == 'Axe 2 LA 7: Soutien aux initiatives de développement économique des territoires en renforçant les capacités de mobilisation de ressources propres, de réalisation d’infrastructures à haute portée économique et de valorisation des potentialités des territoires ; ' ? 'selected' : '' }}>Axe 2 LA 7: Soutien aux initiatives de développement économique des territoires en renforçant les capacités de mobilisation de ressources propres, de réalisation d’infrastructures à haute portée économique et de valorisation des potentialités des territoires ; </option>
+
+                                                <option value="Axe 2 LA 8: Appui aux initiatives de développement de l’économie bleue et de l’économie verte à travers l’implication du secteur privé local ; " {{ $appel->ligne == 'Axe 2 LA 8: Appui aux initiatives de développement de l’économie bleue et de l’économie verte à travers l’implication du secteur privé local ; ' ? 'selected' : '' }}>Axe 2 LA 8: Appui aux initiatives de développement de l’économie bleue et de l’économie verte à travers l’implication du secteur privé local ; </option>
+
+                                                <option value="Axe 2 LA 9: Amélioration du cadre de vie et de l’accès aux services sociaux de base" {{ $appel->ligne == 'Axe 2 LA 9: Amélioration du cadre de vie et de l’accès aux services sociaux de base' ? 'selected' : '' }}>Axe 2 LA 9: Amélioration du cadre de vie et de l’accès aux services sociaux de base</option>
+
+                                                {{-- Axe 3 --}}
+                                                <option value="Axe 3 LA 10: Appui à l’économie sociale et solidaire (ESS) dans les collectivités territoriales " {{ $appel->ligne == 'Axe 3 LA 10: Appui à l’économie sociale et solidaire (ESS) dans les collectivités territoriales ' ? 'selected' : '' }}>Axe 3 LA 10: Appui à l’économie sociale et solidaire (ESS) dans les collectivités territoriales </option>
+
+                                                <option value="Axe 3 LA 11: Accompagnement des collectivités territoriales et des communautés à valoriser les filières porteuses de l’économie locale et les opportunités de la croissance durable " {{ $appel->ligne == 'Axe 3 LA 11: Accompagnement des collectivités territoriales et des communautés à valoriser les filières porteuses de l’économie locale et les opportunités de la croissance durable ' ? 'selected' : '' }}>Axe 3 LA 11: Accompagnement des collectivités territoriales et des communautés à valoriser les filières porteuses de l’économie locale et les opportunités de la croissance durable </option>
+
+                                                <option value="Axe 3 LA 12: Développement d’offres de renforcement de capacités d’entreprenariat et d’autonomisation adaptées aux contextes locaux en relation avec les universités, les structures d’Enseignement Technique et de la Formation Professionnelle, les chambres consulaires, les associations faîtières des producteurs, etc" {{ $appel->ligne == 'Axe 3 LA 12: Développement d’offres de renforcement de capacités d’entreprenariat et d’autonomisation adaptées aux contextes locaux en relation avec les universités, les structures d’Enseignement Technique et de la Formation Professionnelle, les chambres consulaires, les associations faîtières des producteurs, etc' ? 'selected' : '' }}>Axe 3 LA 12: Développement d’offres de renforcement de capacités d’entreprenariat et d’autonomisation adaptées aux contextes locaux...</option>
+
+                                                <option value="Axe 3 LA 13: Renforcement des capacités techniques, organisationnelles et institutionnelles des collectivités territoriales dans la formulation et la mise en œuvre de stratégies locales de promotion de l’emploi et d’autonomisation économique des jeunes, des femmes, des personnes handicapées et autres groupes vulnérables. " {{ $appel->ligne == 'Axe 3 LA 13: Renforcement des capacités techniques, organisationnelles et institutionnelles des collectivités territoriales dans la formulation et la mise en œuvre de stratégies locales de promotion de l’emploi et d’autonomisation économique des jeunes, des femmes, des personnes handicapées et autres groupes vulnérables. ' ? 'selected' : '' }}>Axe 3 LA 13: Renforcement des capacités techniques... (troncature suggérée pour lisibilité)</option>
+
+                                                {{-- Axe 4 --}}
+                                                <option value="Axe 4 LA 14: Renforcement des capacités d’intervention des acteurs locaux pour la territorialisation des politiques publiques et des Agendas internationaux " {{ $appel->ligne == 'Axe 4 LA 14: Renforcement des capacités d’intervention des acteurs locaux pour la territorialisation des politiques publiques et des Agendas internationaux ' ? 'selected' : '' }}>Axe 4 LA 14: Renforcement des capacités d’intervention des acteurs locaux...</option>
+
+                                                <option value="Axe 4 LA 15: Appui à l’élaboration, la mise-en œuvre et le suivi évaluation des documents de planification des Collectivités Territoriales qui intègrent les politiques publiques et les Agendas internationaux pour une meilleure justice sociale et spatiale " {{ $appel->ligne == 'Axe 4 LA 15: Appui à l’élaboration, la mise-en œuvre et le suivi évaluation des documents de planification des Collectivités Territoriales qui intègrent les politiques publiques et les Agendas internationaux pour une meilleure justice sociale et spatiale ' ? 'selected' : '' }}>Axe 4 LA 15: Appui à l’élaboration... (troncature)</option>
+
+                                                <option value="Axe 4 LA 16: Accompagnement des villes et territoires dans les stratégies et actions de mobilisation de ressources et l’expérimentation et la mise à l’échelle de mécanismes innovants de financement de leur développement. " {{ $appel->ligne == 'Axe 4 LA 16: Accompagnement des villes et territoires dans les stratégies et actions de mobilisation de ressources et l’expérimentation et la mise à l’échelle de mécanismes innovants de financement de leur développement. ' ? 'selected' : '' }}>Axe 4 LA 16: Accompagnement des villes...</option>
+
+                                                {{-- Axe 5 --}}
+                                                <option value="Axe 5 LA 17: Appui aux initiatives de transition numérique pour une transformation durable des villes et territoires en Afrique" {{ $appel->ligne == 'Axe 5 LA 17: Appui aux initiatives de transition numérique pour une transformation durable des villes et territoires en Afrique' ? 'selected' : '' }}>Axe 5 LA 17: Appui aux initiatives de transition numérique...</option>
+
+                                                <option value="Axe 5 LA 18: Appui à la valorisation et gestion durables des ressources naturelles et foncières des villes et territoires d’Afrique " {{ $appel->ligne == 'Axe 5 LA 18: Appui à la valorisation et gestion durables des ressources naturelles et foncières des villes et territoires d’Afrique ' ? 'selected' : '' }}>Axe 5 LA 18: Appui à la valorisation...</option>
+
+                                                <option value="Axe 5 LA 19: Accompagnement et consolidation des initiatives de transition écologique et énergétique dans les villes et territoires" {{ $appel->ligne == 'Axe 5 LA 19: Accompagnement et consolidation des initiatives de transition écologique et énergétique dans les villes et territoires' ? 'selected' : '' }}>Axe 5 LA 19: Accompagnement et consolidation des initiatives de transition écologique...</option>
+
+                                                <option value="Axe 5 LA 20: Accompagnement des collectivités territoriales dans la valorisation du capital humain par la capture du dividende démographique pour une transformation sociale et sociétale durable en Afrique" {{ $appel->ligne == 'Axe 5 LA 20: Accompagnement des collectivités territoriales dans la valorisation du capital humain par la capture du dividende démographique pour une transformation sociale et sociétale durable en Afrique' ? 'selected' : '' }}>Axe 5 LA 20: Accompagnement des collectivités dans la valorisation du capital humain...</option>
                                             </select>
                                         </div>
                                     </div>
+
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label>Statut</label>
