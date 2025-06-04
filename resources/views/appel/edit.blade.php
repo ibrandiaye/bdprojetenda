@@ -25,7 +25,7 @@
                 </div><!-- /.container-fluid -->
             </div>
 
-        {!! Form::model($appel, ['method'=>'PATCH','route'=>['appel.update', $appel->id]]) !!}
+        {!! Form::model($appel, ['method'=>'PATCH','route'=>['appel.update', $appel->id],'enctype'=>'multipart/form-data']) !!}
             @csrf
              <div class="card border-danger border-0">
                         <div class="card-header bg-info text-center">FORMULAIRE DE MODIFICATION D'une appel</div>
@@ -46,7 +46,7 @@
                                             <select class="form-control" name="type_id" required>
                                                 <option value="">Faites un choix</option>
                                                 @foreach ($types as $type)
-                                                <option value="{{ $type->id }}" >{{ $type->nom }} </option>
+                                                <option value="{{ $type->id }}" {{ $appel->type_id==$type->id ? 'selected' :'' }}>{{ $type->nom }} </option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -251,9 +251,9 @@
                                             <label>Statut</label>
                                             <select class="form-control" name="etat" required>
                                                 <option value="">Faites un choix</option>
-                                                <option value="En cours" >En cours</option>
-                                                <option value="Approuve" >Approuve</option>
-                                                <option value="Non approuve" >Non approuve</option>
+                                                <option value="En cours" {{ $appel->etat=="En cours" ? 'selected' : '' }} >En cours</option>
+                                                <option value="Approuve" {{ $appel->etat=="Approuve" ? 'selected' : '' }}>Approuve</option>
+                                                <option value="Non approuve" {{ $appel->etat=="Non approuve" ? 'selected' : '' }}>Non approuve</option>
                                             </select>
                                         </div>
                                     </div>

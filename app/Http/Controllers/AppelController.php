@@ -125,6 +125,7 @@ class AppelController extends Controller
     {
         $types = $this->typeRepository->getAll();
         $appel = $this->appelRepository->getById($id);
+
         return view('appel.edit',compact('appel','types'));
     }
 
@@ -137,6 +138,18 @@ class AppelController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $nombreFichier = count($request['docs']);
+         $fichiers = $request['docs'];
+        for($x = 0; $x < $nombreFichier; $x++) {
+            $files = $fichiers[$x];
+             $destinationPath = 'doc/'; // upload path
+             $docName = time().$x.".". $files->getClientOriginalExtension();
+             $files->move($destinationPath, $docName);
+             $docAppel = new DocAppel();
+             $docAppel->nomdoc = $docName;
+             $docAppel->appel_id=$id;
+             $docAppel->save();
+        }
         $this->appelRepository->update($id, $request->all());
         return redirect('appel');
     }

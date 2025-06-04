@@ -53,6 +53,7 @@
                             <th>Personnes impliquées</th>
                             <th>Axe stratégique</th>
                             <th>Lignes d'action et statut</th>
+                            <th>Statut</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -76,6 +77,7 @@
                             <td>{{ $appel->personne }}</td>
                             <td>{{ $appel->axe }}</td>
                             <td>{{ $appel->ligne }}</td>
+                             <td>{{ $appel->etat }}</td>
                             <td>
                                 <a href="{{ route('appel.edit', $appel->id) }}" role="button" class="btn btn-primary"><i class="fas fa-edit"></i></a>
                                 <a href="{{ route('appel.show', $appel->id) }}" role="button" class="btn btn-success"><i class="fas fa-eye"></i></a>
