@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\DocAppel;
+use App\Document;
 use App\Repositories\AppelRepository;
 use App\Repositories\DocAppelRepository;
 use App\Repositories\DocumentRepository;
@@ -165,8 +166,9 @@ class AppelController extends Controller
      */
     public function destroy($id)
     {
-        DocAppel::where("appel_id",$id)->delete()
-;        $this->appelRepository->destroy($id);
+        DocAppel::where("appel_id",$id)->delete();
+        Document::where("appel_id",$id)->delete();
+                $this->appelRepository->destroy($id);
         return redirect('appel');
     }
 }
