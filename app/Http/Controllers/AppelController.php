@@ -165,7 +165,8 @@ class AppelController extends Controller
      */
     public function destroy($id)
     {
-        $this->appelRepository->destroy($id);
+        DocAppel::where("appel_id",$id)->delete()
+;        $this->appelRepository->destroy($id);
         return redirect('appel');
     }
 }
