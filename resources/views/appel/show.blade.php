@@ -136,7 +136,7 @@
                               <dt class="col-sm-4">Document</dt>
                               <dd class="col-sm-8">
                                 @foreach($appel->docAppels as $key => $value)
-                                    <a href="/doc/{{ $value->nomdoc }}"  > Document {{ $key }}</a></dd>
+                                    <a href="/bdprojetenda/doc/{{ $value->nomdoc }}"  > Document {{ $key }}</a></dd>
 
                                 @endforeach
                                 </dl>
