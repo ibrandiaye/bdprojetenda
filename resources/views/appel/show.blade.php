@@ -140,6 +140,12 @@
 
                                 @endforeach
                                 </dl>
+                                 <dt class="col-sm-4">Utilisateur</dt>
+                              <dl class="col-sm-8">
+                               @if(!empty($appel->user))
+                                {{ $appel->user->name }}
+                               @endif
+                              </dl>
                           </div>
                           <!-- /.card-body -->
                         </div>

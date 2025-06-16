@@ -10,6 +10,7 @@ use App\Repositories\EmployeRepository;
 use App\Repositories\MatriceRepository;
 use App\Repositories\TypeRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AppelController extends Controller
 {
@@ -81,7 +82,7 @@ class AppelController extends Controller
      /*  $imageName = time().'.'.$request->doc->extension();
         $request->doc->move(public_path('doc'), $imageName);
         $request->merge(['document'=>$imageName]);*/
-        $request->merge(['document'=>"neant"]);
+        $request->merge(['document'=>"neant","user_id"=>Auth::user()->id]);
         $appel = $this->appelRepository->store($request->all());
         $nombreFichier = count($request['docs']);
         $fichiers = $request['docs'];
@@ -150,6 +151,8 @@ class AppelController extends Controller
              $docAppel->appel_id=$id;
              $docAppel->save();
         }
+        $request->merge(["user_id"=>Auth::user()->id]);
+
         $this->appelRepository->update($id, $request->all());
         return redirect('appel');
     }
